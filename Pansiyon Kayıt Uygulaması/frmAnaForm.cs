@@ -37,5 +37,12 @@ namespace Pansiyon_Kayıt_Uygulaması
             fr.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmMusteriler fr = new frmMusteriler();
+            fr.Show();
+            this.Hide();
+        }
     }
 }

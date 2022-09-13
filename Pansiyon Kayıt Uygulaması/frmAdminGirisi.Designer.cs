@@ -77,6 +77,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(191, 16);
             this.txtSifre.TabIndex = 2;
+            this.txtSifre.UseSystemPasswordChar = true;
             // 
             // btnGirisYap
             // 
@@ -89,6 +90,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btnGirisYap.TabIndex = 3;
             this.btnGirisYap.Text = "Giriş Yap";
             this.btnGirisYap.UseVisualStyleBackColor = false;
+            this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
             // 
             // label3
             // 

@@ -32,6 +32,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btnAdminGiris = new System.Windows.Forms.Button();
             this.btnYeniMusteri = new System.Windows.Forms.Button();
             this.btnOdalar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAdminGiris
@@ -67,12 +68,24 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btnOdalar.UseVisualStyleBackColor = false;
             this.btnOdalar.Click += new System.EventHandler(this.btnOdalar_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.OrangeRed;
+            this.button1.Location = new System.Drawing.Point(58, 160);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 61);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Müşteriler";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmAnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnOdalar);
             this.Controls.Add(this.btnYeniMusteri);
             this.Controls.Add(this.btnAdminGiris);
@@ -87,5 +100,6 @@ namespace Pansiyon_Kayıt_Uygulaması
         private System.Windows.Forms.Button btnAdminGiris;
         private System.Windows.Forms.Button btnYeniMusteri;
         private System.Windows.Forms.Button btnOdalar;
+        private System.Windows.Forms.Button button1;
     }
 }

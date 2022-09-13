@@ -18,7 +18,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             InitializeComponent();
         }
 
-        SqlConnection connection = new SqlConnection(@"Data Source = DESKTOP - ODV8LDJ; Initial Catalog = PansiyonUygulaması; Integrated Security = True");
+        SqlConnection connection = new SqlConnection(@"Data Source = DESKTOP-ODV8LDJ; Initial Catalog = PansiyonUygulaması; Integrated Security = True");
 
         private void btn101_Click(object sender, EventArgs e)
         {
@@ -65,15 +65,41 @@ namespace Pansiyon_Kayıt_Uygulaması
             txtOdaNo.Text = "109";
         }
 
+
+
+
+
+
+
+
+
+
         private void btnDolu_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Kırmızı renkli butonlar dolu odaları gösterir.");
         }
 
+
+
+
+
+
+
+
+
+
         private void btnBos_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Mavi renkli butonlar boş odaları gösterir.");
         }
+
+
+
+
+
+
+
+
 
         private void dtCikisTarihi_ValueChanged(object sender, EventArgs e)
         {
@@ -93,15 +119,24 @@ namespace Pansiyon_Kayıt_Uygulaması
             }
         }
 
+
+
+
+
+
+
+
+
+
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             connection.Open();
-            SqlCommand komut = new SqlCommand("Insert Into MusteriEkle(Adi, Soyadi, Cinsiyet,Telefon,Mail,TcNo,OdaNo,Ucret)                                                                                                  VALUES ('" + txtAdi.Text+"','" + txtSoyadi.Text +"','" + cmbCinsiyet.Text+ "','" 
+            SqlCommand komut = new SqlCommand("Insert Into MusteriEkle(Adi, Soyadi, Cinsiyet,Telefon,Mail,TC,OdaNo,Ucret,GirisTarihi,CikisTarihi)                                                                                                  VALUES ('" + txtAdi.Text+"','" + txtSoyadi.Text +"','" + cmbCinsiyet.Text+ "','" 
                                                + mskTxtTelefon.Text + "','" + txtMail.Text + "','" + txtTcNo.Text + "','" 
-                                               + txtOdaNo.Text + "','" + txtOdaUcreti.Text + "')", connection);
+                                               + txtOdaNo.Text + "','" + txtOdaUcreti.Text + "','" + dtGirisTarihi.Value.ToString("yyyy-MM-dd") +             "','" + dtCikisTarihi.Value.ToString("yyyy-MM-dd") + "')", connection);
             komut.ExecuteNonQuery();        //ExecuteNonQuery, Gönderilen verilerde yada parametrelerde düzenleme yapmayı sağlar
             connection.Close();
-            MessageBox.Show("Müşteri kaydı yapıldı.");
+            MessageBox.Show("Müşteri Kaydı Başarıyla Tamamlandı.");
         }
     }
 }

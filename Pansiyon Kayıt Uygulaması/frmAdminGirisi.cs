@@ -16,5 +16,19 @@ namespace Pansiyon_Kayıt_Uygulaması
         {
             InitializeComponent();
         }
+
+        private void btnGirisYap_Click(object sender, EventArgs e)
+        {
+            if(txtKullaniciAdi.Text== "test@test.com" && txtSifre.Text == "123")
+            {
+                frmAnaForm giris = new frmAnaForm();
+                giris.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Kullanıcı Adı veya Şifresi Hatalı !!!");
+            }
+        }
     }
 }
