@@ -21,28 +21,35 @@ namespace Pansiyon_Kayıt_Uygulaması
         {
             frmAdminGirisi fr = new frmAdminGirisi();
             fr.Show();
-            this.Hide();
+           // this.Hide();
         }
 
         private void btnYeniMusteri_Click(object sender, EventArgs e)
         {
             frmYeniMüsteriEkle fr = new frmYeniMüsteriEkle();
             fr.Show();
-            this.Hide();
+           // this.Hide();
         }
 
         private void btnOdalar_Click(object sender, EventArgs e)
         {
             frmOdalar fr = new frmOdalar();
             fr.Show();
-            this.Hide();
+            //this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+        private void btnMusteriler_Click(object sender, EventArgs e)
         {
             frmMusteriler fr = new frmMusteriler();
             fr.Show();
-            this.Hide();
+            //this.Hide();
+        }
+
+        private void btnHakkimizda_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Pansiyon Kayıt Uygulaması - " + DateTime.Now.Year);
         }
     }
 }

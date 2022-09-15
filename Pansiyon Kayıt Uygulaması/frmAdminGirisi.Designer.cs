@@ -67,7 +67,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.txtKullaniciAdi.Location = new System.Drawing.Point(175, 148);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(191, 16);
-            this.txtKullaniciAdi.TabIndex = 2;
+            this.txtKullaniciAdi.TabIndex = 1;
             // 
             // txtSifre
             // 

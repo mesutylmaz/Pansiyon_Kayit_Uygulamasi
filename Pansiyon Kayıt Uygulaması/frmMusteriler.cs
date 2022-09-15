@@ -39,8 +39,8 @@ namespace Pansiyon_Kayıt_Uygulaması
 
             while (reader.Read())       //Okuma işlemi yapılırken
             {
-                ListViewItem liste = new ListViewItem();   
-                liste.Text = reader["MusteriId"].ToString();       //PrimaryKey property, Text olarak belirtiliyor. Yani, Ana ögeyi belirtiyoruz
+                ListViewItem liste = new ListViewItem();
+                liste.Text = reader["MusteriID"].ToString();       //PrimaryKey property, Text olarak belirtiliyor. Yani, Ana ögeyi belirtiyoruz
                 liste.SubItems.Add(reader["Adi"].ToString());      //Alt ögeler SubItems.Add ile ekleniyor
                 liste.SubItems.Add(reader["Soyadi"].ToString());
                 liste.SubItems.Add(reader["Cinsiyet"].ToString());
@@ -99,19 +99,98 @@ namespace Pansiyon_Kayıt_Uygulaması
         private void btnSil_Click(object sender, EventArgs e)
         {
             connection.Open();  //Bağlantımı aç
-            SqlCommand command = new SqlCommand("Delete * from MusteriEkle where MusteriId=("+id+")", connection);       //Silinecek Verileri Seçilen ID'ye göre çek
-            command.ExecuteNonQuery();
-            MessageBox.Show("Silme İşlemi Başarıyla Gerçekleştirildi.");
-            connection.Close();
-            verileriGoster();
+            //SqlCommand command = new SqlCommand("Delete * from MusteriEkle where MusteriID=("+id+")", connection);       //Silinecek Verileri Seçilen ID'ye göre çek ve sil
+
+            if (txtOdaNo.Text == "101")
+            {
+                SqlCommand command = new SqlCommand("Delete from Oda101", connection);       //Silinecek Verileri Seçilen ID'ye göre çek ve sil
+                command.ExecuteNonQuery();
+                FormuTemizle();
+                connection.Close();
+                MessageBox.Show("Silme İşlemi Başarıyla Gerçekleştirildi.");
+                verileriGoster();
+            }
+            if (txtOdaNo.Text == "102")
+            {
+                SqlCommand command = new SqlCommand("Delete from Oda102", connection);       //Silinecek Verileri Seçilen ID'ye göre çek ve sil
+                command.ExecuteNonQuery();
+                FormuTemizle();
+                connection.Close();
+                MessageBox.Show("Silme İşlemi Başarıyla Gerçekleştirildi.");
+                verileriGoster();
+            }
+            if (txtOdaNo.Text == "103")
+            {
+                SqlCommand command = new SqlCommand("Delete from Oda103", connection);       //Silinecek Verileri Seçilen ID'ye göre çek ve sil
+                command.ExecuteNonQuery();
+                FormuTemizle();
+                connection.Close();
+                MessageBox.Show("Silme İşlemi Başarıyla Gerçekleştirildi.");
+                verileriGoster();
+            }
+            if (txtOdaNo.Text == "104")
+            {
+                SqlCommand command = new SqlCommand("Delete from Oda104", connection);       //Silinecek Verileri Seçilen ID'ye göre çek ve sil
+                command.ExecuteNonQuery();
+                FormuTemizle();
+                connection.Close();
+                MessageBox.Show("Silme İşlemi Başarıyla Gerçekleştirildi.");
+                verileriGoster();
+            }
+            if (txtOdaNo.Text == "105")
+            {
+                SqlCommand command = new SqlCommand("Delete from Oda105", connection);       //Silinecek Verileri Seçilen ID'ye göre çek ve sil
+                command.ExecuteNonQuery();
+                FormuTemizle();
+                connection.Close();
+                MessageBox.Show("Silme İşlemi Başarıyla Gerçekleştirildi.");
+                verileriGoster();
+            }
+            if (txtOdaNo.Text == "106")
+            {
+                SqlCommand command = new SqlCommand("Delete from Oda106", connection);       //Silinecek Verileri Seçilen ID'ye göre çek ve sil
+                command.ExecuteNonQuery();
+                FormuTemizle();
+                connection.Close();
+                MessageBox.Show("Silme İşlemi Başarıyla Gerçekleştirildi.");
+                verileriGoster();
+            }
+            if (txtOdaNo.Text == "107")
+            {
+                SqlCommand command = new SqlCommand("Delete from Oda107", connection);       //Silinecek Verileri Seçilen ID'ye göre çek ve sil
+                command.ExecuteNonQuery();
+                FormuTemizle();
+                connection.Close();
+                MessageBox.Show("Silme İşlemi Başarıyla Gerçekleştirildi.");
+                verileriGoster();
+            }
+            if (txtOdaNo.Text == "108")
+            {
+                SqlCommand command = new SqlCommand("Delete from Oda108", connection);       //Silinecek Verileri Seçilen ID'ye göre çek ve sil
+                command.ExecuteNonQuery();
+                FormuTemizle();
+                connection.Close();
+                MessageBox.Show("Silme İşlemi Başarıyla Gerçekleştirildi.");
+                verileriGoster();
+            }
+            if (txtOdaNo.Text == "109")
+            {
+                SqlCommand command = new SqlCommand("Delete from Oda109", connection);       //Silinecek Verileri Seçilen ID'ye göre çek ve sil
+                command.ExecuteNonQuery();
+                FormuTemizle();
+                connection.Close();
+                MessageBox.Show("Silme İşlemi Başarıyla Gerçekleştirildi.");
+                verileriGoster();
+            }
+
+
+
         }
 
 
 
 
-
-
-        private void btnTemizle_Click(object sender, EventArgs e)
+        private void FormuTemizle()
         {
             txtAdi.Clear();
             txtSoyadi.Clear();
@@ -122,7 +201,16 @@ namespace Pansiyon_Kayıt_Uygulaması
             txtMail.Text = "";
             txtOdaNo.Clear();
             dtGirisTarihi.Text = DateTime.Now.ToShortDateString();
-            dtCikisTarihi.Text= DateTime.Now.ToShortDateString();
+            dtCikisTarihi.Text = DateTime.Now.ToShortDateString();
+        }
+
+
+
+
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            FormuTemizle();
         }
 
 
@@ -135,11 +223,50 @@ namespace Pansiyon_Kayıt_Uygulaması
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
             connection.Open();  //Bağlantımı aç
-            SqlCommand command = new SqlCommand("Update MusteriEkle set Adi='"+txtAdi.Text+ "', Soyadi='" + txtSoyadi.Text + "',Cinsiyet='" + cmbCinsiyet.Text + "',Telefon='" + mskTxtTelefon.Text + "',Mail='" + txtMail.Text + "',TC='" + txtAdi.Text + "',OdaNo='" + cmbCinsiyet.Text + "',Ucret='" + txtOdaUcreti.Text + "',GirisTarihi='" + dtGirisTarihi.Value.ToString("yyyy-MM-dd") + "',CikisTarihi='" + dtCikisTarihi.Value.ToString("yyyy-MM-dd") + "', where MusteriId=(" + id + ")", connection);       //Güncellenecek Verileri Seçilen ID'ye göre çekecek, formda alanları değiştirdikten sonra butona basarak verileri güncelleyecek.
+            SqlCommand command = new SqlCommand("Update MusteriEkle set Adi='" + txtAdi.Text + "', Soyadi='" + txtSoyadi.Text + "', Cinsiyet='" + cmbCinsiyet.Text + "', Telefon='" + mskTxtTelefon.Text + "', Mail='" + txtMail.Text + "', TC='" + txtTcNo.Text + "', OdaNo='" + txtOdaNo.Text + "', Ucret='" + txtOdaUcreti.Text + "', GirisTarihi='" + dtGirisTarihi.Value.ToString("yyyy-MM-dd") + "', CikisTarihi='" + dtCikisTarihi.Value.ToString("yyyy-MM-dd") + "' where MusteriID= (" + id + ") ", connection);       //Güncellenecek Verileri Seçilen ID'ye göre çekecek, formda alanları değiştirdikten sonra butona basarak verileri güncelleyecek.
             command.ExecuteNonQuery();
-            MessageBox.Show("Güncelleme İşlemi Başarıyla Gerçekleştirildi.");
+            FormuTemizle();
             connection.Close();
+            MessageBox.Show("Güncelleme İşlemi Başarıyla Gerçekleştirildi.");
             verileriGoster();
+        }
+
+
+
+
+
+
+
+
+
+
+
+        private void btnAra_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+
+            connection.Open();
+            SqlCommand command = new SqlCommand("select * from MusteriEkle where Adi like '%" + txtAra.Text + "%'    ", connection);
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                ListViewItem liste = new ListViewItem();
+                liste.Text = reader["MusteriID"].ToString();       //PrimaryKey property, Text olarak belirtiliyor. Yani, Ana ögeyi belirtiyoruz
+                liste.SubItems.Add(reader["Adi"].ToString());      //Alt ögeler SubItems.Add ile ekleniyor
+                liste.SubItems.Add(reader["Soyadi"].ToString());
+                liste.SubItems.Add(reader["Cinsiyet"].ToString());
+                liste.SubItems.Add(reader["Telefon"].ToString());
+                liste.SubItems.Add(reader["Mail"].ToString());
+                liste.SubItems.Add(reader["TC"].ToString());
+                liste.SubItems.Add(reader["OdaNo"].ToString());
+                liste.SubItems.Add(reader["Ucret"].ToString());
+                liste.SubItems.Add(reader["GirisTarihi"].ToString());
+                liste.SubItems.Add(reader["CikisTarihi"].ToString());
+
+                listView1.Items.Add(liste);
+            }
+            connection.Close();
         }
     }
 }

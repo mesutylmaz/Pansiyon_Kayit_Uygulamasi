@@ -40,6 +40,9 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btn102 = new System.Windows.Forms.Button();
             this.btn101 = new System.Windows.Forms.Button();
             this.grpMusteriBilgileri = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cmbCinsiyet = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtOdaUcreti = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.mskTxtTelefon = new System.Windows.Forms.MaskedTextBox();
@@ -61,9 +64,6 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btnKaydet = new System.Windows.Forms.Button();
             this.btnBos = new System.Windows.Forms.Button();
             this.btnDolu = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cmbCinsiyet = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.grpOdalar.SuspendLayout();
             this.grpMusteriBilgileri.SuspendLayout();
             this.SuspendLayout();
@@ -93,7 +93,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btn109.Location = new System.Drawing.Point(263, 272);
             this.btn109.Name = "btn109";
             this.btn109.Size = new System.Drawing.Size(75, 52);
-            this.btn109.TabIndex = 4;
+            this.btn109.TabIndex = 20;
             this.btn109.Text = "109";
             this.btn109.UseVisualStyleBackColor = false;
             this.btn109.Click += new System.EventHandler(this.btn109_Click);
@@ -104,7 +104,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btn108.Location = new System.Drawing.Point(141, 272);
             this.btn108.Name = "btn108";
             this.btn108.Size = new System.Drawing.Size(75, 52);
-            this.btn108.TabIndex = 5;
+            this.btn108.TabIndex = 19;
             this.btn108.Text = "108";
             this.btn108.UseVisualStyleBackColor = false;
             this.btn108.Click += new System.EventHandler(this.btn108_Click);
@@ -115,7 +115,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btn107.Location = new System.Drawing.Point(22, 272);
             this.btn107.Name = "btn107";
             this.btn107.Size = new System.Drawing.Size(75, 52);
-            this.btn107.TabIndex = 6;
+            this.btn107.TabIndex = 18;
             this.btn107.Text = "107";
             this.btn107.UseVisualStyleBackColor = false;
             this.btn107.Click += new System.EventHandler(this.btn107_Click);
@@ -126,7 +126,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btn106.Location = new System.Drawing.Point(263, 152);
             this.btn106.Name = "btn106";
             this.btn106.Size = new System.Drawing.Size(75, 52);
-            this.btn106.TabIndex = 1;
+            this.btn106.TabIndex = 17;
             this.btn106.Text = "106";
             this.btn106.UseVisualStyleBackColor = false;
             this.btn106.Click += new System.EventHandler(this.btn106_Click);
@@ -137,7 +137,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btn105.Location = new System.Drawing.Point(141, 152);
             this.btn105.Name = "btn105";
             this.btn105.Size = new System.Drawing.Size(75, 52);
-            this.btn105.TabIndex = 2;
+            this.btn105.TabIndex = 16;
             this.btn105.Text = "105";
             this.btn105.UseVisualStyleBackColor = false;
             this.btn105.Click += new System.EventHandler(this.btn105_Click);
@@ -148,7 +148,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btn104.Location = new System.Drawing.Point(22, 152);
             this.btn104.Name = "btn104";
             this.btn104.Size = new System.Drawing.Size(75, 52);
-            this.btn104.TabIndex = 3;
+            this.btn104.TabIndex = 15;
             this.btn104.Text = "104";
             this.btn104.UseVisualStyleBackColor = false;
             this.btn104.Click += new System.EventHandler(this.btn104_Click);
@@ -159,7 +159,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btn103.Location = new System.Drawing.Point(263, 40);
             this.btn103.Name = "btn103";
             this.btn103.Size = new System.Drawing.Size(75, 52);
-            this.btn103.TabIndex = 0;
+            this.btn103.TabIndex = 14;
             this.btn103.Text = "103";
             this.btn103.UseVisualStyleBackColor = false;
             this.btn103.Click += new System.EventHandler(this.btn103_Click);
@@ -170,7 +170,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btn102.Location = new System.Drawing.Point(141, 40);
             this.btn102.Name = "btn102";
             this.btn102.Size = new System.Drawing.Size(75, 52);
-            this.btn102.TabIndex = 0;
+            this.btn102.TabIndex = 13;
             this.btn102.Text = "102";
             this.btn102.UseVisualStyleBackColor = false;
             this.btn102.Click += new System.EventHandler(this.btn102_Click);
@@ -181,7 +181,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btn101.Location = new System.Drawing.Point(22, 40);
             this.btn101.Name = "btn101";
             this.btn101.Size = new System.Drawing.Size(75, 52);
-            this.btn101.TabIndex = 0;
+            this.btn101.TabIndex = 12;
             this.btn101.Text = "101";
             this.btn101.UseVisualStyleBackColor = false;
             this.btn101.Click += new System.EventHandler(this.btn101_Click);
@@ -218,13 +218,43 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.grpMusteriBilgileri.TabStop = false;
             this.grpMusteriBilgileri.Text = "Müşteri Bilgileri";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(349, 359);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(18, 20);
+            this.label11.TabIndex = 39;
+            this.label11.Text = "0";
+            // 
+            // cmbCinsiyet
+            // 
+            this.cmbCinsiyet.FormattingEnabled = true;
+            this.cmbCinsiyet.Items.AddRange(new object[] {
+            "Kadın",
+            "Erkek"});
+            this.cmbCinsiyet.Location = new System.Drawing.Point(139, 89);
+            this.cmbCinsiyet.Name = "cmbCinsiyet";
+            this.cmbCinsiyet.Size = new System.Drawing.Size(196, 28);
+            this.cmbCinsiyet.TabIndex = 3;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Location = new System.Drawing.Point(68, 91);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(68, 20);
+            this.label10.TabIndex = 37;
+            this.label10.Text = "Cinsiyet:";
+            // 
             // txtOdaUcreti
             // 
             this.txtOdaUcreti.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtOdaUcreti.Location = new System.Drawing.Point(139, 251);
             this.txtOdaUcreti.Name = "txtOdaUcreti";
             this.txtOdaUcreti.Size = new System.Drawing.Size(196, 26);
-            this.txtOdaUcreti.TabIndex = 36;
+            this.txtOdaUcreti.TabIndex = 8;
             // 
             // label7
             // 
@@ -243,7 +273,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.mskTxtTelefon.Mask = "(999) 000-0000";
             this.mskTxtTelefon.Name = "mskTxtTelefon";
             this.mskTxtTelefon.Size = new System.Drawing.Size(196, 26);
-            this.mskTxtTelefon.TabIndex = 34;
+            this.mskTxtTelefon.TabIndex = 4;
             // 
             // dtCikisTarihi
             // 
@@ -251,7 +281,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.dtCikisTarihi.Location = new System.Drawing.Point(139, 315);
             this.dtCikisTarihi.Name = "dtCikisTarihi";
             this.dtCikisTarihi.Size = new System.Drawing.Size(196, 26);
-            this.dtCikisTarihi.TabIndex = 33;
+            this.dtCikisTarihi.TabIndex = 10;
             this.dtCikisTarihi.ValueChanged += new System.EventHandler(this.dtCikisTarihi_ValueChanged);
             // 
             // dtGirisTarihi
@@ -260,7 +290,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.dtGirisTarihi.Location = new System.Drawing.Point(139, 283);
             this.dtGirisTarihi.Name = "dtGirisTarihi";
             this.dtGirisTarihi.Size = new System.Drawing.Size(196, 26);
-            this.dtGirisTarihi.TabIndex = 32;
+            this.dtGirisTarihi.TabIndex = 9;
             // 
             // label8
             // 
@@ -289,7 +319,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.txtOdaNo.Location = new System.Drawing.Point(139, 219);
             this.txtOdaNo.Name = "txtOdaNo";
             this.txtOdaNo.Size = new System.Drawing.Size(196, 26);
-            this.txtOdaNo.TabIndex = 29;
+            this.txtOdaNo.TabIndex = 7;
             // 
             // label4
             // 
@@ -308,7 +338,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.txtTcNo.MaxLength = 11;
             this.txtTcNo.Name = "txtTcNo";
             this.txtTcNo.Size = new System.Drawing.Size(196, 26);
-            this.txtTcNo.TabIndex = 27;
+            this.txtTcNo.TabIndex = 6;
             // 
             // label5
             // 
@@ -326,7 +356,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.txtMail.Location = new System.Drawing.Point(139, 155);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(196, 26);
-            this.txtMail.TabIndex = 25;
+            this.txtMail.TabIndex = 5;
             // 
             // label6
             // 
@@ -354,7 +384,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.txtSoyadi.Location = new System.Drawing.Point(139, 56);
             this.txtSoyadi.Name = "txtSoyadi";
             this.txtSoyadi.Size = new System.Drawing.Size(196, 26);
-            this.txtSoyadi.TabIndex = 22;
+            this.txtSoyadi.TabIndex = 2;
             // 
             // label2
             // 
@@ -372,7 +402,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.txtAdi.Location = new System.Drawing.Point(139, 24);
             this.txtAdi.Name = "txtAdi";
             this.txtAdi.Size = new System.Drawing.Size(196, 26);
-            this.txtAdi.TabIndex = 20;
+            this.txtAdi.TabIndex = 1;
             // 
             // label1
             // 
@@ -390,7 +420,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btnKaydet.Location = new System.Drawing.Point(139, 359);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(135, 35);
-            this.btnKaydet.TabIndex = 18;
+            this.btnKaydet.TabIndex = 11;
             this.btnKaydet.Text = "KAYDET";
             this.btnKaydet.UseVisualStyleBackColor = true;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
@@ -418,36 +448,6 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btnDolu.UseVisualStyleBackColor = false;
             this.btnDolu.Click += new System.EventHandler(this.btnDolu_Click);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(68, 91);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 20);
-            this.label10.TabIndex = 37;
-            this.label10.Text = "Cinsiyet:";
-            // 
-            // cmbCinsiyet
-            // 
-            this.cmbCinsiyet.FormattingEnabled = true;
-            this.cmbCinsiyet.Items.AddRange(new object[] {
-            "Kadın",
-            "Erkek"});
-            this.cmbCinsiyet.Location = new System.Drawing.Point(139, 89);
-            this.cmbCinsiyet.Name = "cmbCinsiyet";
-            this.cmbCinsiyet.Size = new System.Drawing.Size(196, 28);
-            this.cmbCinsiyet.TabIndex = 38;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(349, 359);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(18, 20);
-            this.label11.TabIndex = 39;
-            this.label11.Text = "0";
-            // 
             // frmYeniMüsteriEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -462,6 +462,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.MinimizeBox = false;
             this.Name = "frmYeniMüsteriEkle";
             this.Text = "Yeni Müşteri Ekle";
+            this.Load += new System.EventHandler(this.frmYeniMüsteriEkle_Load);
             this.grpOdalar.ResumeLayout(false);
             this.grpMusteriBilgileri.ResumeLayout(false);
             this.grpMusteriBilgileri.PerformLayout();

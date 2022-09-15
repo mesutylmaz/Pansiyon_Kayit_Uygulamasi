@@ -89,7 +89,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.listView1.Location = new System.Drawing.Point(0, 332);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(893, 169);
-            this.listView1.TabIndex = 0;
+            this.listView1.TabIndex = 7;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
@@ -195,9 +195,10 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btnAra.Location = new System.Drawing.Point(708, 289);
             this.btnAra.Name = "btnAra";
             this.btnAra.Size = new System.Drawing.Size(125, 27);
-            this.btnAra.TabIndex = 4;
+            this.btnAra.TabIndex = 6;
             this.btnAra.Text = "Ara";
             this.btnAra.UseVisualStyleBackColor = false;
+            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
             // 
             // cmbCinsiyet
             // 
@@ -401,7 +402,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.txtAra.MaxLength = 11;
             this.txtAra.Name = "txtAra";
             this.txtAra.Size = new System.Drawing.Size(196, 26);
-            this.txtAra.TabIndex = 60;
+            this.txtAra.TabIndex = 5;
             // 
             // label11
             // 
@@ -422,7 +423,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btnTemizle.Location = new System.Drawing.Point(740, 187);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(125, 37);
-            this.btnTemizle.TabIndex = 61;
+            this.btnTemizle.TabIndex = 4;
             this.btnTemizle.Text = "Formu Temizle";
             this.btnTemizle.UseVisualStyleBackColor = false;
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);

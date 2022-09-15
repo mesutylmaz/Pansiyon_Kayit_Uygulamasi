@@ -46,7 +46,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btn109.Location = new System.Drawing.Point(265, 261);
             this.btn109.Name = "btn109";
             this.btn109.Size = new System.Drawing.Size(75, 52);
-            this.btn109.TabIndex = 13;
+            this.btn109.TabIndex = 9;
             this.btn109.Text = "109";
             this.btn109.UseVisualStyleBackColor = false;
             // 
@@ -56,7 +56,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btn108.Location = new System.Drawing.Point(143, 261);
             this.btn108.Name = "btn108";
             this.btn108.Size = new System.Drawing.Size(75, 52);
-            this.btn108.TabIndex = 14;
+            this.btn108.TabIndex = 8;
             this.btn108.Text = "108";
             this.btn108.UseVisualStyleBackColor = false;
             // 
@@ -66,7 +66,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btn107.Location = new System.Drawing.Point(24, 261);
             this.btn107.Name = "btn107";
             this.btn107.Size = new System.Drawing.Size(75, 52);
-            this.btn107.TabIndex = 15;
+            this.btn107.TabIndex = 7;
             this.btn107.Text = "107";
             this.btn107.UseVisualStyleBackColor = false;
             // 
@@ -76,7 +76,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btn106.Location = new System.Drawing.Point(265, 141);
             this.btn106.Name = "btn106";
             this.btn106.Size = new System.Drawing.Size(75, 52);
-            this.btn106.TabIndex = 10;
+            this.btn106.TabIndex = 6;
             this.btn106.Text = "106";
             this.btn106.UseVisualStyleBackColor = false;
             // 
@@ -86,7 +86,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btn105.Location = new System.Drawing.Point(143, 141);
             this.btn105.Name = "btn105";
             this.btn105.Size = new System.Drawing.Size(75, 52);
-            this.btn105.TabIndex = 11;
+            this.btn105.TabIndex = 5;
             this.btn105.Text = "105";
             this.btn105.UseVisualStyleBackColor = false;
             // 
@@ -96,7 +96,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btn104.Location = new System.Drawing.Point(24, 141);
             this.btn104.Name = "btn104";
             this.btn104.Size = new System.Drawing.Size(75, 52);
-            this.btn104.TabIndex = 12;
+            this.btn104.TabIndex = 4;
             this.btn104.Text = "104";
             this.btn104.UseVisualStyleBackColor = false;
             // 
@@ -106,7 +106,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btn103.Location = new System.Drawing.Point(265, 29);
             this.btn103.Name = "btn103";
             this.btn103.Size = new System.Drawing.Size(75, 52);
-            this.btn103.TabIndex = 7;
+            this.btn103.TabIndex = 3;
             this.btn103.Text = "103";
             this.btn103.UseVisualStyleBackColor = false;
             // 
@@ -116,7 +116,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btn102.Location = new System.Drawing.Point(143, 29);
             this.btn102.Name = "btn102";
             this.btn102.Size = new System.Drawing.Size(75, 52);
-            this.btn102.TabIndex = 8;
+            this.btn102.TabIndex = 2;
             this.btn102.Text = "102";
             this.btn102.UseVisualStyleBackColor = false;
             // 
@@ -126,7 +126,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btn101.Location = new System.Drawing.Point(24, 29);
             this.btn101.Name = "btn101";
             this.btn101.Size = new System.Drawing.Size(75, 52);
-            this.btn101.TabIndex = 9;
+            this.btn101.TabIndex = 1;
             this.btn101.Text = "101";
             this.btn101.UseVisualStyleBackColor = false;
             // 
@@ -147,6 +147,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.Controls.Add(this.btn101);
             this.Name = "frmOdalar";
             this.Text = "Odalar";
+            this.Load += new System.EventHandler(this.frmOdalar_Load);
             this.ResumeLayout(false);
 
         }
