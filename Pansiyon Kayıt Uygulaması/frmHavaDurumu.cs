@@ -22,7 +22,7 @@ namespace Pansiyon_Kayıt_Uygulaması
 
         private const string api = "629cfbed55d985e200c00a2219649794";
 
-        private const string baglanti = "http://api.openweathermap.org/data/2.5/weather?q=Turkey,Istanbul&mode=xml&units=metric&APPID=" + api;
+        private const string baglanti = "http://api.openweathermap.org/data/2.5/weather?q=Turkey,Aydin&mode=xml&units=metric&APPID=" + api;
 
 
 
@@ -42,24 +42,28 @@ namespace Pansiyon_Kayıt_Uygulaması
             lblDurum.Text = durum.ToString();
 
             var sehir = hava.Descendants("city").ElementAt(0).Attribute("name").Value;
-            lblSehir.Text = sehir.ToString();
+            //lblSehir.Text = sehir.ToString();
+            lblSehir.Text = "Türkiye";
 
 
             if (durum.Contains("clouds"))
             {
                 pictureBox1.Visible = true;
+                lblDurum.Text = "Bulutlu ve Kapalı";
             }
 
 
             if (durum.Contains("sun") || durum.Contains("clear sky"))
             {
                 pictureBox2.Visible = true;
+                lblDurum.Text = "Güneşli ve Açık";
             }
 
 
             if (durum.Contains("rainy"))
             {
                 pictureBox3.Visible = true;
+                lblDurum.Text = "Yağışlı";
             }
         }
     }
