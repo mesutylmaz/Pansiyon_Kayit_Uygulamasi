@@ -46,6 +46,8 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnAc = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAdminGiris
@@ -53,7 +55,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btnAdminGiris.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnAdminGiris.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdminGiris.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdminGiris.Location = new System.Drawing.Point(42, 77);
+            this.btnAdminGiris.Location = new System.Drawing.Point(42, 91);
             this.btnAdminGiris.Name = "btnAdminGiris";
             this.btnAdminGiris.Size = new System.Drawing.Size(128, 61);
             this.btnAdminGiris.TabIndex = 1;
@@ -66,7 +68,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btnYeniMusteri.BackColor = System.Drawing.Color.Gold;
             this.btnYeniMusteri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnYeniMusteri.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnYeniMusteri.Location = new System.Drawing.Point(232, 77);
+            this.btnYeniMusteri.Location = new System.Drawing.Point(232, 91);
             this.btnYeniMusteri.Name = "btnYeniMusteri";
             this.btnYeniMusteri.Size = new System.Drawing.Size(128, 61);
             this.btnYeniMusteri.TabIndex = 2;
@@ -79,7 +81,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btnOdalar.BackColor = System.Drawing.Color.DarkOrchid;
             this.btnOdalar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOdalar.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOdalar.Location = new System.Drawing.Point(419, 77);
+            this.btnOdalar.Location = new System.Drawing.Point(419, 91);
             this.btnOdalar.Name = "btnOdalar";
             this.btnOdalar.Size = new System.Drawing.Size(128, 61);
             this.btnOdalar.TabIndex = 3;
@@ -92,7 +94,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btnMusteriler.BackColor = System.Drawing.Color.OrangeRed;
             this.btnMusteriler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMusteriler.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMusteriler.Location = new System.Drawing.Point(42, 182);
+            this.btnMusteriler.Location = new System.Drawing.Point(42, 196);
             this.btnMusteriler.Name = "btnMusteriler";
             this.btnMusteriler.Size = new System.Drawing.Size(128, 61);
             this.btnMusteriler.TabIndex = 4;
@@ -105,7 +107,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btnGelirGiderFormu.BackColor = System.Drawing.Color.Fuchsia;
             this.btnGelirGiderFormu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGelirGiderFormu.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGelirGiderFormu.Location = new System.Drawing.Point(232, 182);
+            this.btnGelirGiderFormu.Location = new System.Drawing.Point(232, 196);
             this.btnGelirGiderFormu.Name = "btnGelirGiderFormu";
             this.btnGelirGiderFormu.Size = new System.Drawing.Size(128, 61);
             this.btnGelirGiderFormu.TabIndex = 5;
@@ -118,11 +120,11 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btnStoklar.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnStoklar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStoklar.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStoklar.Location = new System.Drawing.Point(419, 182);
+            this.btnStoklar.Location = new System.Drawing.Point(419, 196);
             this.btnStoklar.Name = "btnStoklar";
             this.btnStoklar.Size = new System.Drawing.Size(128, 61);
             this.btnStoklar.TabIndex = 6;
-            this.btnStoklar.Text = "Stoklar";
+            this.btnStoklar.Text = "Masraflar";
             this.btnStoklar.UseVisualStyleBackColor = false;
             this.btnStoklar.Click += new System.EventHandler(this.btnStoklar_Click);
             // 
@@ -131,7 +133,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btnMesajlar.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.btnMesajlar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMesajlar.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMesajlar.Location = new System.Drawing.Point(42, 297);
+            this.btnMesajlar.Location = new System.Drawing.Point(42, 311);
             this.btnMesajlar.Name = "btnMesajlar";
             this.btnMesajlar.Size = new System.Drawing.Size(128, 61);
             this.btnMesajlar.TabIndex = 7;
@@ -144,7 +146,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btnRadyoDinle.BackColor = System.Drawing.Color.DarkOrange;
             this.btnRadyoDinle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRadyoDinle.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRadyoDinle.Location = new System.Drawing.Point(232, 297);
+            this.btnRadyoDinle.Location = new System.Drawing.Point(232, 311);
             this.btnRadyoDinle.Name = "btnRadyoDinle";
             this.btnRadyoDinle.Size = new System.Drawing.Size(128, 61);
             this.btnRadyoDinle.TabIndex = 8;
@@ -157,7 +159,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btnHakkimizda.BackColor = System.Drawing.Color.Chocolate;
             this.btnHakkimizda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHakkimizda.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHakkimizda.Location = new System.Drawing.Point(419, 297);
+            this.btnHakkimizda.Location = new System.Drawing.Point(419, 311);
             this.btnHakkimizda.Name = "btnHakkimizda";
             this.btnHakkimizda.Size = new System.Drawing.Size(128, 61);
             this.btnHakkimizda.TabIndex = 9;
@@ -183,7 +185,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btnPersoneller.BackColor = System.Drawing.Color.Violet;
             this.btnPersoneller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPersoneller.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPersoneller.Location = new System.Drawing.Point(606, 297);
+            this.btnPersoneller.Location = new System.Drawing.Point(606, 311);
             this.btnPersoneller.Name = "btnPersoneller";
             this.btnPersoneller.Size = new System.Drawing.Size(128, 61);
             this.btnPersoneller.TabIndex = 13;
@@ -196,19 +198,20 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.btnHavaDurumu.BackColor = System.Drawing.Color.Crimson;
             this.btnHavaDurumu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHavaDurumu.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHavaDurumu.Location = new System.Drawing.Point(606, 182);
+            this.btnHavaDurumu.Location = new System.Drawing.Point(606, 196);
             this.btnHavaDurumu.Name = "btnHavaDurumu";
             this.btnHavaDurumu.Size = new System.Drawing.Size(128, 61);
             this.btnHavaDurumu.TabIndex = 12;
             this.btnHavaDurumu.Text = "Hava Durumu";
             this.btnHavaDurumu.UseVisualStyleBackColor = false;
+            this.btnHavaDurumu.Click += new System.EventHandler(this.btnHavaDurumu_Click);
             // 
             // btnGazeteler
             // 
             this.btnGazeteler.BackColor = System.Drawing.Color.ForestGreen;
             this.btnGazeteler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGazeteler.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGazeteler.Location = new System.Drawing.Point(606, 77);
+            this.btnGazeteler.Location = new System.Drawing.Point(606, 91);
             this.btnGazeteler.Name = "btnGazeteler";
             this.btnGazeteler.Size = new System.Drawing.Size(128, 61);
             this.btnGazeteler.TabIndex = 11;
@@ -220,7 +223,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poor Richard", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(192, 29);
+            this.label1.Location = new System.Drawing.Point(214, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 22);
             this.label1.TabIndex = 14;
@@ -230,7 +233,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poor Richard", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(457, 30);
+            this.label2.Location = new System.Drawing.Point(479, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 22);
             this.label2.TabIndex = 15;
@@ -240,6 +243,34 @@ namespace Pansiyon_Kayıt_Uygulaması
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button1
+            // 
+            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button1.BackColor = System.Drawing.Color.Crimson;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(76, 18);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(59, 52);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Müziği Kapat";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnAc
+            // 
+            this.btnAc.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAc.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnAc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAc.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAc.Location = new System.Drawing.Point(11, 18);
+            this.btnAc.Name = "btnAc";
+            this.btnAc.Size = new System.Drawing.Size(59, 52);
+            this.btnAc.TabIndex = 17;
+            this.btnAc.Text = "Müziği Aç";
+            this.btnAc.UseVisualStyleBackColor = false;
+            this.btnAc.Click += new System.EventHandler(this.btnAc_Click);
+            // 
             // frmAnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,6 +278,8 @@ namespace Pansiyon_Kayıt_Uygulaması
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(800, 391);
+            this.Controls.Add(this.btnAc);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnPersoneller);
@@ -292,5 +325,7 @@ namespace Pansiyon_Kayıt_Uygulaması
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAc;
     }
 }

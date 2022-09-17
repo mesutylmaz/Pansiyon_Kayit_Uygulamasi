@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,6 +28,8 @@ namespace Pansiyon_Kayıt_Uygulaması
         frmRadyoDinle radyo;
         frmYeniMüsteriEkle yenimusteri;
         frmPersonelListesi personel;
+        frmHavaDurumu hava;
+
 
         private void btnAdminGiris_Click(object sender, EventArgs e)
         {
@@ -109,11 +112,20 @@ namespace Pansiyon_Kayıt_Uygulaması
             Application.Exit();
         }
 
-
+        private SoundPlayer ses = new SoundPlayer();
 
         private void frmAnaForm_Load(object sender, EventArgs e)
         {
             timer1.Start();
+            //SoundPlayer ses = new SoundPlayer();
+            //string dizin = Application.StartupPath + "\\OneRepublic - Counting Stars (online-audio-converter.com).wav";
+            //ses.SoundLocation = dizin;
+            //ses.Play();
+
+
+
+            this.ses.SoundLocation = Application.StartupPath + "\\Maroon 5 - Girls Like You ft. Cardi B (online-audio-converter.com).wav";
+            this.ses.PlayLooping();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -212,6 +224,29 @@ namespace Pansiyon_Kayıt_Uygulaması
             else
             {
                 MessageBox.Show("Personel Listesi Sayfası Zaten Açık!");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.ses.Stop();
+        }
+
+        private void btnAc_Click(object sender, EventArgs e)
+        {
+            this.ses.Play();
+        }
+
+        private void btnHavaDurumu_Click(object sender, EventArgs e)
+        {
+            if (hava == null || hava.IsDisposed)
+            {
+                hava = new frmHavaDurumu();
+                hava.Show();
+            }
+            else
+            {
+                MessageBox.Show("Hava Durumu Sayfası Zaten Açık!");
             }
         }
     }
