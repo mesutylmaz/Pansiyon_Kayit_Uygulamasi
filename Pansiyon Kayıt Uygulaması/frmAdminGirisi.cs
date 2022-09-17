@@ -65,5 +65,21 @@ namespace Pansiyon_Kayıt_Uygulaması
             }
 
         }
+
+
+
+
+
+        private void btnCikis_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnSifreUnuttum_Click(object sender, EventArgs e)
+        {
+            frmSifreGuncelle sifre = new frmSifreGuncelle();
+            sifre.Show();
+            this.Close();
+        }
     }
 }

@@ -119,7 +119,7 @@ namespace Pansiyon_Kayıt_Uygulaması
             if (gunSayisi >= 0)
             {
                 label11.Text = gunSayisi.ToString();
-                ucret = Convert.ToInt32(label11.Text) * 50;
+                ucret = Convert.ToInt32(label11.Text) * 250;
 
                 txtOdaUcreti.Text = ucret.ToString();
             }
@@ -314,6 +314,8 @@ namespace Pansiyon_Kayıt_Uygulaması
 
         private void frmYeniMüsteriEkle_Load(object sender, EventArgs e)
         {
+            label11.Visible = false;
+
             //Oda 101
             connection.Open();
             SqlCommand komut1 = new SqlCommand("Select * from Oda101", connection);
@@ -329,7 +331,6 @@ namespace Pansiyon_Kayıt_Uygulaması
             if (btn101.Text != "101")
             {
                 btn101.BackColor = Color.Red;
-                btn101.Text = "Dolu";
                 btn101.Enabled = false;
             }
 
@@ -350,7 +351,6 @@ namespace Pansiyon_Kayıt_Uygulaması
             if (btn102.Text != "102")
             {
                 btn102.BackColor = Color.Red;
-                btn102.Text = "Dolu";
                 btn102.Enabled = false;
             }
 
@@ -371,7 +371,6 @@ namespace Pansiyon_Kayıt_Uygulaması
             if (btn103.Text != "103")
             {
                 btn103.BackColor = Color.Red;
-                btn103.Text = "Dolu";
                 btn103.Enabled = false;
             }
 
@@ -392,7 +391,6 @@ namespace Pansiyon_Kayıt_Uygulaması
             if (btn104.Text != "104")
             {
                 btn104.BackColor = Color.Red;
-                btn104.Text = "Dolu";
                 btn104.Enabled = false;
             }
 
@@ -413,7 +411,6 @@ namespace Pansiyon_Kayıt_Uygulaması
             if (btn105.Text != "105")
             {
                 btn105.BackColor = Color.Red;
-                btn105.Text = "Dolu";
                 btn105.Enabled = false;
             }
 
@@ -434,7 +431,6 @@ namespace Pansiyon_Kayıt_Uygulaması
             if (btn106.Text != "106")
             {
                 btn106.BackColor = Color.Red;
-                btn106.Text = "Dolu";
                 btn106.Enabled = false;
             }
 
@@ -455,7 +451,6 @@ namespace Pansiyon_Kayıt_Uygulaması
             if (btn107.Text != "107")
             {
                 btn107.BackColor = Color.Red;
-                btn107.Text = "Dolu";
                 btn107.Enabled = false;
             }
 
@@ -476,7 +471,6 @@ namespace Pansiyon_Kayıt_Uygulaması
             if (btn108.Text != "108")
             {
                 btn108.BackColor = Color.Red;
-                btn108.Text = "Dolu";
                 btn108.Enabled = false;
             }
 
@@ -497,9 +491,18 @@ namespace Pansiyon_Kayıt_Uygulaması
             if (btn109.Text != "109")
             {
                 btn109.BackColor = Color.Red;
-                btn109.Text = "Dolu";
                 btn109.Enabled = false;
             }
+        }
+
+        private void btnCikis_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnVazgec_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

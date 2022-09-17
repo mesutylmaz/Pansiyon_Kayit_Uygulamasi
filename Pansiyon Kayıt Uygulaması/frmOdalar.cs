@@ -582,5 +582,10 @@ namespace Pansiyon_Kayıt_Uygulaması
                 btn109.BackColor = Color.Red;
             }
         }
+
+        private void btnKapat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

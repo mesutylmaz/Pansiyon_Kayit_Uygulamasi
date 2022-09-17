@@ -33,8 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,6 +65,24 @@
     <Compile Include="frmAnaForm.Designer.cs">
       <DependentUpon>frmAnaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGazeteler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGazeteler.Designer.cs">
+      <DependentUpon>frmGazeteler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGelirGider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGelirGider.Designer.cs">
+      <DependentUpon>frmGelirGider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMesaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMesaj.Designer.cs">
+      <DependentUpon>frmMesaj.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMusteriler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,11 +95,59 @@
     <Compile Include="frmOdalar.Designer.cs">
       <DependentUpon>frmOdalar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMasraflar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMasraflar.Designer.cs">
+      <DependentUpon>frmMasraflar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPersoneller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPersoneller.Designer.cs">
+      <DependentUpon>frmPersoneller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPersonelListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPersonelListesi.Designer.cs">
+      <DependentUpon>frmPersonelListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRadyoDinle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRadyoDinle.Designer.cs">
+      <DependentUpon>frmRadyoDinle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSifreGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSifreGuncelle.Designer.cs">
+      <DependentUpon>frmSifreGuncelle.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmYeniMüsteriEkle.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmYeniMüsteriEkle.Designer.cs">
       <DependentUpon>frmYeniMüsteriEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonelModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonelModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,11 +157,35 @@
     <EmbeddedResource Include="frmAnaForm.resx">
       <DependentUpon>frmAnaForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGazeteler.resx">
+      <DependentUpon>frmGazeteler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGelirGider.resx">
+      <DependentUpon>frmGelirGider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMesaj.resx">
+      <DependentUpon>frmMesaj.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMusteriler.resx">
       <DependentUpon>frmMusteriler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmOdalar.resx">
       <DependentUpon>frmOdalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMasraflar.resx">
+      <DependentUpon>frmMasraflar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPersoneller.resx">
+      <DependentUpon>frmPersoneller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPersonelListesi.resx">
+      <DependentUpon>frmPersonelListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRadyoDinle.resx">
+      <DependentUpon>frmRadyoDinle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSifreGuncelle.resx">
+      <DependentUpon>frmSifreGuncelle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmYeniMüsteriEkle.resx">
       <DependentUpon>frmYeniMüsteriEkle.cs</DependentUpon>
@@ -102,6 +199,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
+    <EntityDeploy Include="PersonelModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PersonelModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PersonelModel.edmx.diagram">
+      <DependentUpon>PersonelModel.edmx</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -114,6 +219,40 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PersonelModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PersonelModel.edmx</DependentUpon>
+      <LastGenOutput>PersonelModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="PersonelModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PersonelModel.edmx</DependentUpon>
+      <LastGenOutput>PersonelModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

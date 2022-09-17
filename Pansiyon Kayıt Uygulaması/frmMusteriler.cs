@@ -268,5 +268,10 @@ namespace Pansiyon_Kayıt_Uygulaması
             }
             connection.Close();
         }
+
+        private void btnCikis_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
